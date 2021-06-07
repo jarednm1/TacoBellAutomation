@@ -50,7 +50,11 @@ Exterior.click()
 PortionSize = driver.find_element_by_xpath('//*[@id="FNSR007000"]/td[2]/span')
 PortionSize.click()
 
-# NEED TASTE?? It still completes but it might add it due to automation?
+# NEED TASTE?? It still completes but it might add it due to automation? Not everytime?
+# check if xpath exists?
+Taste = driver.find_element_by_xpath('//*[@id="FNSR005000"]/td[2]/span')
+Taste.click()
+
 time.sleep(30)
 NextButton()
 
