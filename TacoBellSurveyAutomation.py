@@ -12,8 +12,13 @@ driver = webdriver.Chrome()
 driver.get('https://www.tellthebell.com/')
 
 # Finds Entry Box and starts typing
-sixteen_digit = input("Please enter the 16 digit code from your survey: ")
-cashier_name = input("Please enter the name listed team member: ")
+#sixteen_digit = input("Please enter the 16 digit code from your survey: ")
+#cashier_name = input("Please enter the name listed team member: ")
+
+# For Dev
+sixteen_digit = 1525803122870026
+cashier_name = "Justin"
+
 survey_code_box = driver.find_element_by_xpath('//*[@id="CN1"]')
 survey_code_box.send_keys(sixteen_digit)
 
@@ -120,4 +125,4 @@ Sweepstakes = driver.find_element_by_xpath('//*[@id="FNSR046000"]/td[3]/span')
 Sweepstakes.click()
 
 # Final Submission
-NextButton()
+# NextButton()
