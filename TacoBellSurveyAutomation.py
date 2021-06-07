@@ -23,9 +23,8 @@ start_button_click.click()
 
 # If Sccessful
 # Screen 1 - Overall Satisfaction
-HighSatisfy1 = driver.find_element_by_xpath('//*[@id="FNSR001000"]/td[2]/span')
-HighSatisfy1.click()
-
+HighSatisfy = driver.find_element_by_xpath('//*[@id="FNSR001000"]/td[2]/span')
+HighSatisfy.click()
 NextButton()
 
 # Screen 2 - Rate Satisfication Big Chunk Completely Random Order
@@ -34,6 +33,7 @@ try:
     SpeedService.click()
 except:
         print("Option Not Present")
+
 try:
     HealthSafety = driver.find_element_by_xpath('//*[@id="FNSR000121"]/td[2]/span')
     HealthSafety.click()
@@ -70,28 +70,23 @@ try:
 except:
     print("Option Not Present")
 
-
 try:
     Taste = driver.find_element_by_xpath('//*[@id="FNSR005000"]/td[2]/span')
     Taste.click()
 except:
         print("Option Not Present")
 
-time.sleep(30)
 NextButton()
 
 # Screen 3 - Problem In Visit
 Problem = driver.find_element_by_xpath('//*[@id="FNSR024000"]/td[3]/span')
 Problem.click()
-
 NextButton()
 
 # Screen 4 - You said You were highly satisfied
 StockResponse1 = "Food was amazing and the speed was incredible!"
 TextBox1 = driver.find_element_by_xpath('//*[@id="S081000"]')
 TextBox1.send_keys(StockResponse1)
-
-time.sleep(15)
 NextButton()
 
 # Screen 4 - Reconize Team Member? Yes
@@ -107,32 +102,22 @@ TeamMemberName.send_keys(cashier_name)
 TeamMemberDescription = driver.find_element_by_xpath('//*[@id="S081002"]')
 FillResponse = cashier_name + " did an excellent job taking care of myself and other customers in the line. Exceptional work!"
 TeamMemberDescription.send_keys(FillResponse)
-
-time.sleep(15)
 NextButton()
 
 # Screen 6 - Hard or Soft Shell?
 HardSoft = driver.find_element_by_xpath('//*[@id="FNSR031000"]/td[3]/span')
 HardSoft.click()
-
 NextButton()
 
 # Screen 7 - Health Saftey Extended Response
 HealthySafetyER = driver.find_element_by_xpath('//*[@id="S000124"]')
 FillResponse2 = cashier_name + " made me feel safe. All interactions followed strict guidelines regarding saftey!"
 HealthySafetyER.send_keys(FillResponse2)
-
 NextButton()
 
 # Screen 8 - Enter Sweepstakes?
 Sweepstakes = driver.find_element_by_xpath('//*[@id="FNSR046000"]/td[3]/span')
 Sweepstakes.click()
 
-# Does this work? commented out for obvi reasons
-#NextButton()
-
-##############################################
-#invalid_code = driver.find_element_by_xpath('//*[@id="surveyQuestions"]/div[1]')
-
-# if its on page kill script
-#if(invalid_code == true)
+# Final Submission
+NextButton()
