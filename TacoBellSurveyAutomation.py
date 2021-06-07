@@ -16,13 +16,13 @@ start_button_click = driver.find_element_by_xpath('//*[@id="NextButton"]')
 start_button_click.click()
 
 # If Sccessful
-# Screen 1
+# Screen 1 - Overall Satisfaction
 HighSatisfy1 = driver.find_element_by_xpath('//*[@id="FNSR001000"]/td[2]/span')
 HighSatisfy1.click()
 Next1 = driver.find_element_by_xpath('//*[@id="NextButton"]')
 Next1.click()
 
-# Screen 2
+# Screen 2 - Rate Satisfication Big Chunk
 SpeedService = driver.find_element_by_xpath('//*[@id="FNSR012000"]/td[2]/span')
 SpeedService.click()
 
@@ -32,6 +32,7 @@ HealthSafety.click()
 FriendlyTeam = driver.find_element_by_xpath('//*[@id="FNSR010000"]/td[2]/span')
 FriendlyTeam.click()
 
+# Might be missing accuracy?
 Accuracy = driver.find_element_by_xpath('//*[@id="FNSR008000"]/td[2]/span')
 Accuracy.click()
 
@@ -48,7 +49,7 @@ PortionSize.click()
 Next2 = driver.find_element_by_xpath('//*[@id="NextButton"]')
 Next2.click()
 
-# Screen 3
+# Screen 3 DOES THIS EXIST NOW?
 Accuracy2 = driver.find_element_by_xpath('//*[@id="FNSR008000"]/td[2]/span')
 Accuracy2.click()
 
@@ -100,12 +101,22 @@ HardSoft.click()
 Next1 = driver.find_element_by_xpath('//*[@id="NextButton"]')
 Next1.click()
 
-# Screen 9 - Health Saftey Extedned Response
+# Screen 9 - Health Saftey Extended Response
 HealthySafetyER = driver.find_element_by_xpath('//*[@id="S000124"]')
-FillResponse = cashier_name + " made me feel safe. All interactions followed strict guidelines regarding saftey!"
-HealthySafetyER.send_keys(FillResponse)
+FillResponse2 = cashier_name + " made me feel safe. All interactions followed strict guidelines regarding saftey!"
+HealthySafetyER.send_keys(FillResponse2)
 
+# Does this work?
+Next1 = driver.find_element_by_xpath('//*[@id="NextButton"]')
+Next1.click()
 
+# Screen 8 - Enter Sweepstakes?
+Sweepstakes = driver.find_element_by_xpath('//*[@id="FNSR046000"]/td[3]/span')
+Sweepstakes.click()
+
+# Does this work?
+Next1 = driver.find_element_by_xpath('//*[@id="NextButton"]')
+Next1.click()
 
 ##############################################
 #invalid_code = driver.find_element_by_xpath('//*[@id="surveyQuestions"]/div[1]')
