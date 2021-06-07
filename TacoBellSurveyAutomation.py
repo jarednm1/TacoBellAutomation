@@ -20,10 +20,13 @@ try:
 
     # TODO: Add 16 Digit Verify 
     # TODO: Add Name Verify (if no name give standard name and hope?)
-    
+
     # For Dev
     SixteenDigitCode = 1525803122870026
     CashierName = "Justin"
+
+    if(CashierName == ""):
+        CashierName = "YEET"
 
     SurveyCode = driver.find_element_by_xpath('//*[@id="CN1"]')
     SurveyCode.send_keys(SixteenDigitCode)
