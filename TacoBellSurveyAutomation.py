@@ -29,31 +29,53 @@ HighSatisfy1.click()
 NextButton()
 
 # Screen 2 - Rate Satisfication Big Chunk Completely Random Order
-SpeedService = driver.find_element_by_xpath('//*[@id="FNSR012000"]/td[2]/span')
-SpeedService.click()
+try:
+    SpeedService = driver.find_element_by_xpath('//*[@id="FNSR012000"]/td[2]/span')
+    SpeedService.click()
+except:
+        print("Option Not Present")
+try:
+    HealthSafety = driver.find_element_by_xpath('//*[@id="FNSR000121"]/td[2]/span')
+    HealthSafety.click()
+except:
+    print("Option Not Present")
 
-HealthSafety = driver.find_element_by_xpath('//*[@id="FNSR000121"]/td[2]/span')
-HealthSafety.click()
+try:
+    FriendlyTeam = driver.find_element_by_xpath('//*[@id="FNSR010000"]/td[2]/span')
+    FriendlyTeam.click()
+except:
+    print("Option Not Present")
 
-FriendlyTeam = driver.find_element_by_xpath('//*[@id="FNSR010000"]/td[2]/span')
-FriendlyTeam.click()
+try:
+    Accuracy = driver.find_element_by_xpath('//*[@id="FNSR008000"]/td[2]/span')
+    Accuracy.click()
+except:
+    print("Option Not Present")
 
-Accuracy = driver.find_element_by_xpath('//*[@id="FNSR008000"]/td[2]/span')
-Accuracy.click()
+try:
+    Appearance = driver.find_element_by_xpath('//*[@id="FNSR011000"]/td[2]/span')
+    Appearance.click()
+except:
+    print("Option Not Present")
 
-Appearance = driver.find_element_by_xpath('//*[@id="FNSR011000"]/td[2]/span')
-Appearance.click()
+try:
+    Exterior = driver.find_element_by_xpath('//*[@id="FNSR014000"]/td[2]/span')
+    Exterior.click()
+except:
+    print("Option Not Present")
 
-Exterior = driver.find_element_by_xpath('//*[@id="FNSR014000"]/td[2]/span')
-Exterior.click()
+try:
+    PortionSize = driver.find_element_by_xpath('//*[@id="FNSR007000"]/td[2]/span')
+    PortionSize.click()
+except:
+    print("Option Not Present")
 
-PortionSize = driver.find_element_by_xpath('//*[@id="FNSR007000"]/td[2]/span')
-PortionSize.click()
 
-# NEED TASTE?? It still completes but it might add it due to automation? Not everytime?
-# check if xpath exists?
-Taste = driver.find_element_by_xpath('//*[@id="FNSR005000"]/td[2]/span')
-Taste.click()
+try:
+    Taste = driver.find_element_by_xpath('//*[@id="FNSR005000"]/td[2]/span')
+    Taste.click()
+except:
+        print("Option Not Present")
 
 time.sleep(30)
 NextButton()
