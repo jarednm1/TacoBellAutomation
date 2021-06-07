@@ -1,33 +1,33 @@
 import random
 from selenium import webdriver
+
 # For Testing
 import time
-import random
 
 def NextButton():
-    Next1 = driver.find_element_by_xpath('//*[@id="NextButton"]')
-    Next1.click()
+    NextButton = driver.find_element_by_xpath('//*[@id="NextButton"]')
+    NextButton.click()
 
 driver = webdriver.Chrome()
 
-# Need to check if Chrome is Updated to Match Driver before this !!!
+# Check For Chrome/Driver Mismatch: Must be on newest Chrome!
 try:
     driver.get('https://www.tellthebell.com/')
 
     # Finds Entry Box and starts typing
-    #sixteen_digit = input("Please enter the 16 digit code from your survey: ")
-    #cashier_name = input("Please enter the name listed team member: ")
+    #SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
+    #CashierName = input("Please enter the name listed team member: ")
 
     # For Dev
-    sixteen_digit = 1525803122870026
-    cashier_name = "Justin"
+    SixteenDigitCode = 1525803122870026
+    CashierName = "Justin"
 
-    survey_code_box = driver.find_element_by_xpath('//*[@id="CN1"]')
-    survey_code_box.send_keys(sixteen_digit)
+    SurveyCode = driver.find_element_by_xpath('//*[@id="CN1"]')
+    SurveyCode.send_keys(SixteenDigitCode)
 
     # Find Start Button and Clicks
-    start_button_click = driver.find_element_by_xpath('//*[@id="NextButton"]')
-    start_button_click.click()
+    StartButton = driver.find_element_by_xpath('//*[@id="NextButton"]')
+    StartButton.click()
 
     # If Sccessful
     # Screen 1 - Overall Satisfaction
@@ -119,7 +119,7 @@ try:
     # Screen 5 - Name Drop Time
     # Team Member Name
     TeamMemberName = driver.find_element_by_xpath('//*[@id="S081001"]')
-    TeamMemberName.send_keys(cashier_name)
+    TeamMemberName.send_keys(CashierName)
 
     # Team Member Extended Response
     FinalResponse = ""
@@ -131,14 +131,13 @@ try:
     print(choice)
 
     if (choice == 0):
-        FinalResponse = cashier_name + StockResponse0
+        FinalResponse = CashierName + StockResponse0
     elif (choice == 1):
-        FinalResponse = cashier_name + StockResponse1
+        FinalResponse = CashierName + StockResponse1
     else:
-        FinalResponse = cashier_name + StockResponse2
+        FinalResponse = CashierName + StockResponse2
 
     TeamMemberDescription = driver.find_element_by_xpath('//*[@id="S081002"]')
-    #FinalResponse = cashier_name + " did an excellent job taking care of myself and other customers in the line. Exceptional work!"
     TeamMemberDescription.send_keys(FinalResponse)
     NextButton()
 
@@ -147,9 +146,9 @@ try:
     HardSoft.click()
     NextButton()
 
-    # Screen 7 - Health Saftey Extended Response
+    # Screen 7 - Health Safety Extended Response
     HealthySafetyER = driver.find_element_by_xpath('//*[@id="S000124"]')
-    FillResponse2 = cashier_name + " made me feel safe. All interactions followed strict guidelines regarding saftey!"
+    FillResponse2 = CashierName + " made me feel safe. All interactions followed strict guidelines regarding saftey!"
     HealthySafetyER.send_keys(FillResponse2)
     NextButton()
 
