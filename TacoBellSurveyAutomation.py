@@ -1,6 +1,8 @@
+import random
 from selenium import webdriver
-#for testing
+# For Testing
 import time
+import random
 
 def NextButton():
     Next1 = driver.find_element_by_xpath('//*[@id="NextButton"]')
@@ -89,9 +91,26 @@ Problem.click()
 NextButton()
 
 # Screen 4 - You said You were highly satisfied
-StockResponse1 = "Food was amazing and the speed was incredible!"
+# Pick a Stock Response
+FinalResponse = ""
+StockResponse0 = "Food was amazing and the speed was incredible!"
+StockResponse1 = "Food tasted good."
+StockResponse2 = "Did not run into a single shortcoming!"
+# Picks 0-2
+choice = random.randint(0,2)
+
+print(choice)
+
+if (choice is 0):
+    FinalResponse = StockResponse0
+elif (choice is 1):
+    FinalResponse = StockResponse1
+else:
+    FinalResponse = StockResponse2
+
 TextBox1 = driver.find_element_by_xpath('//*[@id="S081000"]')
-TextBox1.send_keys(StockResponse1)
+TextBox1.send_keys(FinalResponse)
+# time.sleep(30)
 NextButton()
 
 # Screen 4 - Reconize Team Member? Yes
