@@ -96,14 +96,12 @@ FinalResponse = ""
 StockResponse0 = "Food was amazing and the speed was incredible!"
 StockResponse1 = "Food tasted good."
 StockResponse2 = "Did not run into a single shortcoming!"
-# Picks 0-2
 choice = random.randint(0,2)
-
 print(choice)
 
-if (choice is 0):
+if (choice == 0):
     FinalResponse = StockResponse0
-elif (choice is 1):
+elif (choice == 1):
     FinalResponse = StockResponse1
 else:
     FinalResponse = StockResponse2
@@ -123,9 +121,26 @@ NextButton()
 TeamMemberName = driver.find_element_by_xpath('//*[@id="S081001"]')
 TeamMemberName.send_keys(cashier_name)
 
+# Team Member Extended Response
+FinalResponse = ""
+StockResponse0 = " did an excellent job taking care of myself and other customers in the line. Exceptional work!"
+StockResponse1 = " was super friendly and personal at the window!"
+StockResponse2 = " is an amazing worker! Do whatever you can to keep them."
+# Picks 0-2
+choice = random.randint(0,2)
+print(choice)
+
+if (choice == 0):
+    FinalResponse = cashier_name + StockResponse0
+elif (choice == 1):
+    FinalResponse = cashier_name + StockResponse1
+else:
+    FinalResponse = cashier_name + StockResponse2
+
 TeamMemberDescription = driver.find_element_by_xpath('//*[@id="S081002"]')
-FillResponse = cashier_name + " did an excellent job taking care of myself and other customers in the line. Exceptional work!"
-TeamMemberDescription.send_keys(FillResponse)
+#FinalResponse = cashier_name + " did an excellent job taking care of myself and other customers in the line. Exceptional work!"
+TeamMemberDescription.send_keys(FinalResponse)
+time.sleep(30)
 NextButton()
 
 # Screen 6 - Hard or Soft Shell?
