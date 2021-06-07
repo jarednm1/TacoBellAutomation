@@ -18,6 +18,9 @@ try:
     #SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
     #CashierName = input("Please enter the name listed team member: ")
 
+    # TODO: Add 16 Digit Verify 
+    # TODO: Add Name Verify (if no name give standard name and hope?)
+    
     # For Dev
     SixteenDigitCode = 1525803122870026
     CashierName = "Justin"
@@ -29,7 +32,6 @@ try:
     StartButton = driver.find_element_by_xpath('//*[@id="NextButton"]')
     StartButton.click()
 
-    # If Sccessful
     # Screen 1 - Overall Satisfaction
     HighSatisfy = driver.find_element_by_xpath('//*[@id="FNSR001000"]/td[2]/span')
     HighSatisfy.click()
