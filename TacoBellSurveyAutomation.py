@@ -1,4 +1,5 @@
 import random
+import sys
 from selenium import webdriver
 
 # For Testing
@@ -22,11 +23,22 @@ try:
     # TODO: Add Name Verify (if no name give standard name and hope?)
 
     # For Dev
-    SixteenDigitCode = 1525803122870026
+    SixteenDigitCode = "1525803122870026"
     CashierName = "Justin"
+    if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit()):
+        print("Error: Code Invalid or Contains Non-Numeric Values")
+        time.sleep(15)
+        quit()
+
+    if(CashierName.isalpha() == False):
+       print("Error: Name Contains Numbers/Symbols")
+       time.sleep(15)
+       quit()
+
 
     if(CashierName == ""):
-        CashierName = "YEET"
+        CashierName = "The Manager"
+    
 
     SurveyCode = driver.find_element_by_xpath('//*[@id="CN1"]')
     SurveyCode.send_keys(SixteenDigitCode)
@@ -163,6 +175,7 @@ try:
 
     # Final Submission
     # NextButton()
+    # sys.exit()
 except:
     # Should Work
     print("Error: Chrome and WebDriver Version Desync")
