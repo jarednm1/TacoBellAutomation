@@ -14,8 +14,17 @@ try:
     driver.get('https://www.tellthebell.com/')
 
     # Finds Entry Box and starts typing
-    SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
-    CashierName = input("Please enter the name listed team member: ")
+    #SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
+    #CashierName = input("Please enter the name listed team member: ")
+
+     #For Dev
+    SixteenDigitCode = "1525803122870026"
+    CashierName = "Justin"
+    if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit()):
+        print("Error: Code Invalid or Contains Non-Numeric Values")
+        time.sleep(15)
+        quit()
+
 
     if(CashierName.isalpha() == False):
        print("Error: Name Contains Numbers/Symbols")
@@ -127,7 +136,6 @@ try:
     StockResponse0 = " did an excellent job taking care of myself and other customers in the line. Exceptional work!"
     StockResponse1 = " was super friendly and personal at the window!"
     StockResponse2 = " is an amazing worker! Do whatever you can to keep them."
-    # Picks 0-2
     choice = random.randint(0,2)
 
     if (choice == 0):
@@ -157,8 +165,8 @@ try:
     Sweepstakes.click()
 
     # Final Submission
-    NextButton()
-    sys.exit()
+    #NextButton()
+    #sys.exit()
 except:
     # Should Work
     print("Error: Chrome and WebDriver Version Desync")
