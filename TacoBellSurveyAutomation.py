@@ -127,7 +127,6 @@ try:
     StockResponse0 = " did an excellent job taking care of myself and other customers in the line. Exceptional work!"
     StockResponse1 = " was super friendly and personal at the window!"
     StockResponse2 = " is an amazing worker! Do whatever you can to keep them."
-    # Picks 0-2
     choice = random.randint(0,2)
 
     if (choice == 0):
