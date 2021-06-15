@@ -1,9 +1,7 @@
+from selenium import webdriver
+import time
 import random
 import sys
-from selenium import webdriver
-
-# For Testing
-import time
 
 def NextButton():
     NextButton = driver.find_element_by_xpath('//*[@id="NextButton"]')
@@ -16,29 +14,16 @@ try:
     driver.get('https://www.tellthebell.com/')
 
     # Finds Entry Box and starts typing
-    #SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
-    #CashierName = input("Please enter the name listed team member: ")
-
-    # TODO: Add 16 Digit Verify 
-    # TODO: Add Name Verify (if no name give standard name and hope?)
-
-    # For Dev
-    SixteenDigitCode = "1525803122870026"
-    CashierName = "Justin"
-    if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit()):
-        print("Error: Code Invalid or Contains Non-Numeric Values")
-        time.sleep(15)
-        quit()
+    SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
+    CashierName = input("Please enter the name listed team member: ")
 
     if(CashierName.isalpha() == False):
        print("Error: Name Contains Numbers/Symbols")
        time.sleep(15)
        quit()
 
-
     if(CashierName == ""):
         CashierName = "The Manager"
-    
 
     SurveyCode = driver.find_element_by_xpath('//*[@id="CN1"]')
     SurveyCode.send_keys(SixteenDigitCode)
@@ -57,49 +42,49 @@ try:
         SpeedService = driver.find_element_by_xpath('//*[@id="FNSR012000"]/td[2]/span')
         SpeedService.click()
     except:
-            print("Option Not Present")
+        print("Option Not Present; Skipped")
 
     try:
         HealthSafety = driver.find_element_by_xpath('//*[@id="FNSR000121"]/td[2]/span')
         HealthSafety.click()
     except:
-        print("Option Not Present")
+        print("Option Not Present; Skipped")
 
     try:
         FriendlyTeam = driver.find_element_by_xpath('//*[@id="FNSR010000"]/td[2]/span')
         FriendlyTeam.click()
     except:
-        print("Option Not Present")
+        print("Option Not Present; Skipped")
 
     try:
         Accuracy = driver.find_element_by_xpath('//*[@id="FNSR008000"]/td[2]/span')
         Accuracy.click()
     except:
-        print("Option Not Present")
+        print("Option Not Present; Skipped")
 
     try:
         Appearance = driver.find_element_by_xpath('//*[@id="FNSR011000"]/td[2]/span')
         Appearance.click()
     except:
-        print("Option Not Present")
+        print("Option Not Present; Skipped")
 
     try:
         Exterior = driver.find_element_by_xpath('//*[@id="FNSR014000"]/td[2]/span')
         Exterior.click()
     except:
-        print("Option Not Present")
+        print("Option Not Present; Skipped")
 
     try:
         PortionSize = driver.find_element_by_xpath('//*[@id="FNSR007000"]/td[2]/span')
         PortionSize.click()
     except:
-        print("Option Not Present")
+        print("Option Not Present; Skipped")
 
     try:
         Taste = driver.find_element_by_xpath('//*[@id="FNSR005000"]/td[2]/span')
         Taste.click()
     except:
-            print("Option Not Present")
+            print("Option Not Present; Skipped")
 
     NextButton()
 
@@ -115,7 +100,6 @@ try:
     StockResponse1 = "Food tasted good."
     StockResponse2 = "Did not run into a single shortcoming!"
     choice = random.randint(0,2)
-    print(choice)
 
     if (choice == 0):
         FinalResponse = StockResponse0
@@ -145,7 +129,6 @@ try:
     StockResponse2 = " is an amazing worker! Do whatever you can to keep them."
     # Picks 0-2
     choice = random.randint(0,2)
-    print(choice)
 
     if (choice == 0):
         FinalResponse = CashierName + StockResponse0
@@ -174,8 +157,8 @@ try:
     Sweepstakes.click()
 
     # Final Submission
-    # NextButton()
-    # sys.exit()
+    NextButton()
+    sys.exit()
 except:
     # Should Work
     print("Error: Chrome and WebDriver Version Desync")
