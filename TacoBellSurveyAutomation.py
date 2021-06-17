@@ -19,7 +19,7 @@ try:
 
     #For Dev
     SixteenDigitCode = "1525803122870026"
-    CashierName = "Justin5"
+    CashierName = "Justin"
     
     # Checks if code is valid and is all numbers
     if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit() == False):
@@ -27,11 +27,13 @@ try:
         time.sleep(15)
         quit()
 
+    # If the name includes non-letter characters it fails
     if(CashierName.isalpha() == False):
        print("Error: Name Contains Numbers/Symbols")
        time.sleep(15)
        quit()
 
+    # If no name given it autofills with the manager
     if(CashierName == ""):
         CashierName = "The Manager"
 
