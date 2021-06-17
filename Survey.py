@@ -14,9 +14,13 @@ try:
     driver.get('https://www.tellthebell.com/')
 
     # Finds Entry Box and starts typing
-    SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
-    CashierName = input("Please enter the name listed team member: ")
+    #SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
+    #CashierName = input("Please enter the name listed team member: ")
     
+    #For Dev
+    SixteenDigitCode = "1525803122870026"
+    CashierName = "Justin"
+
     # Checks if code is valid and is all numbers
     if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit() == False):
         print("Error: Code Invalid or Contains Non-Numeric Values")
@@ -164,8 +168,8 @@ try:
     Sweepstakes.click()
 
     # Final Submission
-    NextButton()
-    sys.exit()
+    #NextButton()
+    #sys.exit()
     
 except:
     # Should Work
