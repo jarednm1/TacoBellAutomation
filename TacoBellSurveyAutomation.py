@@ -16,12 +16,20 @@ try:
     # Finds Entry Box and starts typing
     SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
     CashierName = input("Please enter the name listed team member: ")
+    
+    # Checks if code is valid and is all numbers
+    if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit() == False):
+        print("Error: Code Invalid or Contains Non-Numeric Values")
+        time.sleep(15)
+        quit()
 
+    # If the name includes non-letter characters it fails
     if(CashierName.isalpha() == False):
        print("Error: Name Contains Numbers/Symbols")
        time.sleep(15)
        quit()
 
+    # If no name given it autofills with the manager
     if(CashierName == ""):
         CashierName = "The Manager"
 
@@ -37,7 +45,7 @@ try:
     HighSatisfy.click()
     NextButton()
 
-    # Screen 2 - Rate Satisfication Big Chunk Completely Random Order
+    # Screen 2 - Rate Satisfication | Big Chunk | Completely Random Order
     try:
         SpeedService = driver.find_element_by_xpath('//*[@id="FNSR012000"]/td[2]/span')
         SpeedService.click()
@@ -158,7 +166,8 @@ try:
     # Final Submission
     NextButton()
     sys.exit()
+    
 except:
     # Should Work
     print("Error: Chrome and WebDriver Version Desync")
-    print("Solution: Check for updates inside Google Chrome")
+    print("Solution: The Earliest Error Code Points to the Solution")
