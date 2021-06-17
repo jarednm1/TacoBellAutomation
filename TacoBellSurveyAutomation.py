@@ -49,7 +49,7 @@ try:
     HighSatisfy.click()
     NextButton()
 
-    # Screen 2 - Rate Satisfication Big Chunk Completely Random Order
+    # Screen 2 - Rate Satisfication | Big Chunk | Completely Random Order
     try:
         SpeedService = driver.find_element_by_xpath('//*[@id="FNSR012000"]/td[2]/span')
         SpeedService.click()
