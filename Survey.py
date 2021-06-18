@@ -170,7 +170,7 @@ try:
     Sweepstakes.click()
 
     # Final Submission
-    #NextButton()
+    NextButton()
     
 except:
     # Should Work
