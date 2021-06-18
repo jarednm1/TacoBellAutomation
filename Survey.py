@@ -21,6 +21,8 @@ try:
     SixteenDigitCode = "1525803122870026"
     CashierName = "Justin"
 
+    
+
     # Checks if code is valid and is all numbers
     if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit() == False):
         print("Error: Code Invalid or Contains Non-Numeric Values")
@@ -169,9 +171,12 @@ try:
 
     # Final Submission
     #NextButton()
-    #sys.exit()
     
 except:
     # Should Work
     print("Error: Chrome and WebDriver Version Desync")
     print("Solution: The Earliest Error Code Points to the Solution")
+
+time.sleep(5)
+driver.quit()
+print("IF YOU SEE THIS CLOSE WINDOW")
