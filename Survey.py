@@ -17,15 +17,11 @@ try:
     driver.minimize_window()
 
     # Finds Entry Box and starts typing
-    #SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
-    #CashierName = input("Please enter the name listed team member: ")
+    SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
+    CashierName = input("Please enter the name listed team member: ")
     
     # Minimizes the window for easy of use
     driver.maximize_window()
-
-    #For Dev
-    SixteenDigitCode = "1525803122870026"
-    CashierName = "Justin"
 
     # Checks if code is valid and is all numbers
     if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit() == False):
@@ -181,5 +177,6 @@ except:
     print("Error: Chrome and WebDriver Version Desync")
     print("Solution: The Earliest Error Code Points to the Solution")
 
+# Let User See Completion Screen
 time.sleep(5)
 driver.quit()
