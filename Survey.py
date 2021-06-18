@@ -25,13 +25,13 @@ try:
     if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit() == False):
         print("Error: Code Invalid or Contains Non-Numeric Values")
         time.sleep(15)
-        quit()
+        sys.exit()
 
     # If the name includes non-letter characters it fails
     if(CashierName.isalpha() == False):
        print("Error: Name Contains Numbers/Symbols")
        time.sleep(15)
-       quit()
+       sys.exit()
 
     # If no name given it autofills with the manager
     if(CashierName == ""):
