@@ -14,8 +14,9 @@ Outlined below are the required installations to make the magic happen
 First, you need to download the entirety of this repository to your machine. This can be down easily by downloading a ZIP of it via the green "Code" button on GitHub. Then Extract the contents to whereever you wish to storethe files on your machine.
 
 ## Python
-Installing Python on your machine is very simple. Simply install it here: https://www.python.org/downloads/ Custimize the installation and check the box titled "Add Python to Enviroment Variables"
-If you are unsure if Python is installed on your machine type "python -v" in your terminal. 
+Installing Python on your machine is very simple. Simply install it here: https://www.python.org/downloads/ On Windows, customize the installation and check the box titled "Add Python to Enviroment Variables"
+If you are unsure if Python is installed on your machine type "python -v" in your terminal. I wrote this using Python 3.9.5, any backwards compatibility is uncharted territory.
+
 ## Selenium
 To install Selenium you need to type the following command.
 
