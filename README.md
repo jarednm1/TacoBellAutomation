@@ -1,5 +1,6 @@
-Author: Jared Myers
-Updated: 6/18/21
+*Author: Jared Myers*
+
+*Updated: 6/23/21*
 
 # Purpose
 
@@ -20,18 +21,27 @@ If you are unsure if Python is installed on your machine type "python -v" in you
 ## Selenium
 To install Selenium you need to type the following command.
 
-Mac/Linux: 
->pip3 install selenium
+### Mac/Linux:
+```pip3 install selenium```
 
 NOTE: "sudo" is required infront of this command as well!
-Windows: 
->pip install selenium
+
+### Windows: 
+```pip install selenium```
 ## Google Chrome + Chrome Driver
-Chrome:
+## Chrome:
 
 I chose to use Google Chrome as it commonly found on many people's machines. Simple install Google Chrome here: https://www.google.com/chrome/ if you do not already have it installed.
 
-Driver: 
+## Driver: 
+
+#### Mac/Linux:
+TODO
+TODO
+TODO
+
+### Windows:
+
 To install the associated Chrome Driver, Navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 
 # Usage
