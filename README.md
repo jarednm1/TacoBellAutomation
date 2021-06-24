@@ -9,7 +9,7 @@ Additionally, taking the survey and naming the employee listed on the reciept ea
 
 # Requirements
 
-Outlined below are the required installations to make the magic happen
+Outlined below are the required installations to make the magic happen:
 ## The Script
 First, you need to download the entirety of this repository to your machine. This can be down easily by downloading a ZIP of it via the green "Code" button on GitHub. Then Extract the contents to whereever you wish to storethe files on your machine.
 

@@ -34,6 +34,7 @@ try:
         sys.exit()
 
     # If the name includes non-letter characters it fails
+    # Thus, spaces/more than one name ruins the fun
     if(CashierName.isalpha() == False):
        print("Error: Name Contains Numbers/Symbols")
        time.sleep(15)
