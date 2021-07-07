@@ -1,6 +1,6 @@
 *Author: Jared Myers*
 
-*Updated: 6/23/21*
+*Updated: 7/7/21*
 
 # Purpose
 
@@ -24,7 +24,7 @@ To install Selenium you need to type the following command.
 ### Mac/Linux:
 ```pip3 install selenium```
 
-NOTE: "sudo" is required infront of this command as well!
+NOTE: "sudo" is sometimes required infront of this command as well based on your permissions
 
 ### Windows: 
 ```pip install selenium```
@@ -36,13 +36,21 @@ I chose to use Google Chrome as it commonly found on many people's machines. Sim
 ## Driver: 
 
 #### Mac/Linux:
-TODO
-TODO
-TODO
+1. To install the associated Chrome Driver, Navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
+2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
+3. Open Terminal
+4. Run ```sudo nano /etc/paths```
+5. Enter your password
+6. You are now in a basic text editor and will need to add the file path structure where it is located. 
+Example: ```/Users/MY NAME/TacoBellAutomation```
+7. Control + X to quit editing
+8. Y to save changes
+9. Finally, press enter once more to complete the edits (annoying I know)
 
 ### Windows:
 
-To install the associated Chrome Driver, Navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
+1. To install the associated Chrome Driver, Navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
+2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 
 # Usage
 
@@ -55,8 +63,11 @@ There are two ways to execute this python script: The included .bat file and via
 1. Open your terminal/CMD Console
 2. Navigate to the directory where the .py file is located
 3. Enter the command 
-```
-python Survey.py
-```
+```python3 Survey.py```
 4. Press Enter
+
 # Troubleshooting
+WIP
+
+# Known Bugs
+1. Curently, it does not allow spaces in the name/more than one name without spaces. This is an easy fix I just havent dont it as of writing this.
