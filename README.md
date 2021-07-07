@@ -6,7 +6,7 @@
 
 The purpose of this short and simple Python script is to quickly complete the survey found at the top of each and every Taco Bell receipt. I found that it is somewhat long and annoying to take mannually and I feel that its length is a major deterrant to those wanting to take the survey.
 
-Additionally, taking the survey and naming the employee listed on the reciept earns the workers at my local locations monetary compensation per survey mention and I value their hard work.
+Additionally, taking the survey and naming the employee listed on the reciept earns the worker at my local location monetary compensation per survey mention and I value their hard work.
 
 # Requirements
 
@@ -36,12 +36,12 @@ NOTE: ```sudo``` is sometimes required infront of this command as well based on 
 ## Google Chrome + Chrome Driver
 ## Chrome:
 
-I chose to use Google Chrome as it commonly found on many people's machines. Simple install Google Chrome here: https://www.google.com/chrome/ if you do not already have it installed.
+I chose to use Google Chrome as it commonly found on many people's machines. Simply install Google Chrome here: https://www.google.com/chrome/ if you do not already have it installed.
 
 ## Driver: 
 
 #### Mac/Linux:
-1. To install the associated Chrome Driver, Navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
+1. To install the associated Chrome Driver, navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
 2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 3. Open Terminal
 4. Run ```sudo nano /etc/paths```
@@ -54,7 +54,7 @@ Example: ```/Users/MY NAME/TacoBellAutomation```
 
 ### Windows:
 
-1. To install the associated Chrome Driver, Navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
+1. To install the associated Chrome Driver, navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
 2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 
 # Usage
