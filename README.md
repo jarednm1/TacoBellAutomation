@@ -57,8 +57,10 @@ Example: ```/Users/MY NAME/TacoBellAutomation```
 There are two ways to execute this python script: The included .bat file and via the CMD Console. While they both work the same, the .bat file is included for the simplicity of the user.
 
 ## Using the .Bat File:
+NOTE: This does NOT work on Mac/Linux
  1. Navigate to the directory where the .bat file is located
- 2. If you are using Windows 10, simply double click the TakeSurvey.bat
+ 2. Simply double click the TakeSurvey.bat
+ 
 ## Via CMD Line:
 1. Open your terminal/CMD Console
 2. Navigate to the directory where the .py file is located
@@ -67,7 +69,12 @@ There are two ways to execute this python script: The included .bat file and via
 4. Press Enter
 
 # Troubleshooting
-WIP
+I plan to fill this in as people use it and run into problems. Fortunately, this is easily Googlable in most cases!
+
+1.
+2.
+3.
+
 
 # Known Bugs
 1. Curently, it does not allow spaces in the name/more than one name without spaces. This is an easy fix I just havent dont it as of writing this.
