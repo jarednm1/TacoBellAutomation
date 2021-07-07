@@ -17,9 +17,13 @@ try:
     driver.minimize_window()
 
     # Finds Entry Box and starts typing
-    SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
-    CashierName = input("Please enter the name listed team member: ")
+    #SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
+    #CashierName = input("Please enter the name listed team member: ")
     
+    #For Dev
+    SixteenDigitCode = "1525803122870026"
+    CashierName = "Justin"
+
     # Minimizes the window for easy of use
     driver.maximize_window()
 
@@ -30,6 +34,7 @@ try:
         sys.exit()
 
     # If the name includes non-letter characters it fails
+    # Thus, spaces/more than one name ruins the fun
     if(CashierName.isalpha() == False):
        print("Error: Name Contains Numbers/Symbols")
        time.sleep(15)
