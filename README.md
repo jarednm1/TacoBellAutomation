@@ -6,37 +6,42 @@
 
 The purpose of this short and simple Python script is to quickly complete the survey found at the top of each and every Taco Bell receipt. I found that it is somewhat long and annoying to take mannually and I feel that its length is a major deterrant to those wanting to take the survey.
 
-Additionally, taking the survey and naming the employee listed on the reciept earns the workers at my local locations monetary compensation per survey mention and I value their hard work.
+Additionally, taking the survey and naming the employee listed on the reciept earns the worker at my local location monetary compensation per survey mention and I value their hard work.
 
 # Requirements
 
 Outlined below are the required installations to make the magic happen:
 ## The Script
-First, you need to download the entirety of this repository to your machine. This can be down easily by downloading a ZIP of it via the green "Code" button on GitHub. Then Extract the contents to whereever you wish to storethe files on your machine.
+First, you need to download the entirety of this repository to your machine. This can be down easily by downloading a ZIP of it via the green "Code" button on GitHub. Extract the contents to wherever you wish to the files on your machine.
 
 ## Python
-Installing Python on your machine is very simple. Simply install it here: https://www.python.org/downloads/ On Windows, customize the installation and check the box titled "Add Python to Enviroment Variables"
-If you are unsure if Python is installed on your machine type "python -v" in your terminal. I wrote this using Python 3.9.5, any backwards compatibility is uncharted territory.
+Installing Python on your machine is very simple. Simply install it here: https://www.python.org/downloads/ 
+
+On Windows, customize the installation and check the box titled "Add Python to Enviroment Variables"
+
+If you are unsure if Python is installed on your machine type ```python3 -v``` in your terminal. 
+
+I wrote this using Python 3.9.5, any backwards compatibility is uncharted territory.
 
 ## Selenium
-To install Selenium you need to type the following command.
+To install Selenium you need to type the following command on your respective command line/console.
 
 ### Mac/Linux:
 ```pip3 install selenium```
 
-NOTE: "sudo" is sometimes required infront of this command as well based on your permissions
+NOTE: ```sudo``` is sometimes required infront of this command as well based on your permissions
 
 ### Windows: 
 ```pip install selenium```
 ## Google Chrome + Chrome Driver
 ## Chrome:
 
-I chose to use Google Chrome as it commonly found on many people's machines. Simple install Google Chrome here: https://www.google.com/chrome/ if you do not already have it installed.
+I chose to use Google Chrome as it commonly found on many people's machines. Simply install Google Chrome here: https://www.google.com/chrome/ if you do not already have it installed.
 
 ## Driver: 
 
 #### Mac/Linux:
-1. To install the associated Chrome Driver, Navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
+1. To install the associated Chrome Driver, navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
 2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 3. Open Terminal
 4. Run ```sudo nano /etc/paths```
@@ -49,7 +54,7 @@ Example: ```/Users/MY NAME/TacoBellAutomation```
 
 ### Windows:
 
-1. To install the associated Chrome Driver, Navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
+1. To install the associated Chrome Driver, navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
 2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 
 # Usage
