@@ -21,8 +21,8 @@ try:
     CashierName = input("Please enter the name listed team member: ")
     
     #For Dev
-    #SixteenDigitCode = "1525803122870026"
-    #CashierName = "Justin"
+    SixteenDigitCode = "1525803122870026"
+    CashierName = "Justin"
 
     # Minimizes the window for easy of use
     driver.maximize_window()
@@ -175,7 +175,7 @@ try:
     Sweepstakes.click()
 
     # Final Submission
-    NextButton()
+    #NextButton()
     
 except:
     # Should Work
