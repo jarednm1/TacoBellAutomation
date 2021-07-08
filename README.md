@@ -12,7 +12,7 @@ Additionally, taking the survey and naming the employee listed on the reciept ea
 
 Outlined below are the required installations to make the magic happen:
 ## The Script
-First, you need to download the entirety of this repository to your machine. This can be down easily by downloading a ZIP of it via the green "Code" button on GitHub. Then Extract the contents to whereever you wish to storethe files on your machine.
+First, you need to download the entirety of this repository to your machine. This can be down easily by downloading a ZIP of it via the green "Code" button on GitHub. Extract the contents to wherever you wish to the files on your machine.
 
 ## Python
 Installing Python on your machine is very simple. Simply install it here: https://www.python.org/downloads/ 
@@ -24,7 +24,7 @@ If you are unsure if Python is installed on your machine type ```python3 -v``` i
 I wrote this using Python 3.9.5, any backwards compatibility is uncharted territory.
 
 ## Selenium
-To install Selenium you need to type the following command.
+To install Selenium you need to type the following command on your respective command line/console.
 
 ### Mac/Linux:
 ```pip3 install selenium```
