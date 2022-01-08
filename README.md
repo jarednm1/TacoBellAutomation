@@ -1,6 +1,6 @@
 *Author: Jared Myers*
 
-*Updated: 7/7/21*
+*Updated: 1/8/21*
 
 # Purpose
 
@@ -82,4 +82,4 @@ I plan to fill this in as people use it and run into problems. Fortunately, this
 
 
 # Known Bugs
-1. Curently, it does not allow spaces in the name/more than one name without spaces. This is an easy fix I just havent dont it as of writing this.
+1. Curently, it does not allow spaces in the name/more than one name without spaces. This is an easy fix I just havent fixed it as of writing this.
