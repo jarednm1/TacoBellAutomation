@@ -17,12 +17,12 @@ try:
     driver.minimize_window()
 
     # Finds Entry Box and starts typing
-    #SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
-    #CashierName = input("Please enter the name listed team member: ")
+    SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
+    CashierName = input("Please enter the name listed team member: ")
     
     #For Dev
-    SixteenDigitCode = "8041903919073402"
-    CashierName = "Alexis"
+    #SixteenDigitCode = "8041903919073402"
+    #CashierName = "Alexis"
 
     # Minimizes the window for easy of use
     driver.maximize_window()
@@ -54,6 +54,7 @@ try:
     # Screen 1 - Overall Satisfaction
     HighSatisfy = driver.find_element_by_xpath('//*[@id="FNSR001000"]/td[1]/span')
     HighSatisfy.click()
+
     NextButton()
 
     # Screen 2 - Rate Satisfication | Big Chunk | Completely Random Order
@@ -111,9 +112,8 @@ try:
     # Screen 3 - Problem In Visit (No)
     Problem = driver.find_element_by_xpath('//*[@id="FNSR024000"]/td[2]/span')
     Problem.click()
-    NextButton()
 
-    
+    NextButton()
 
     # Screen 4 - You said You were highly satisfied
     # Pick a Stock Response
@@ -186,7 +186,7 @@ try:
     Sweepstakes.click()
 
     # Final Submission
-    #NextButton()
+    NextButton()
     
 except:
     # Should Work
