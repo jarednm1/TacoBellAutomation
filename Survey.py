@@ -130,7 +130,6 @@ try:
         FinalResponse = StockResponse1
     else:
         FinalResponse = StockResponse2
-    print(FinalResponse)
 
     TextBox1 = driver.find_element_by_xpath('//*[@id="S081000"]')
     TextBox1.click()
@@ -195,4 +194,5 @@ except:
 
 # Let User See Completion Screen
 time.sleep(5)
+print("Survey Complete")
 driver.quit()
