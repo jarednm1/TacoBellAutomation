@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 import random
 import sys
+import os
 
 def NextButton():
     NextButton = driver.find_element_by_xpath('//*[@id="NextButton"]')
@@ -20,11 +21,11 @@ try:
     SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
     CashierName = input("Please enter the name listed team member: ")
     
-    #For Dev
-    SixteenDigitCode = "8041903919073402"
-    CashierName = "Alexis"
+    #For Testing - overwrites the above values
+    #SixteenDigitCode = "8041903919073402"
+    #CashierName = "TEST"
 
-    # Minimizes the window for easy of use
+    # Minimizes the window for ease of use
     driver.maximize_window()
 
     # Checks if code is valid and is all numbers
@@ -116,7 +117,7 @@ try:
     NextButton()
 
     # Screen 4 - You said You were highly satisfied
-    # Pick a Stock Response
+    # Pick a Canned Response
     FinalResponse = ""
     StockResponse0 = "Food was amazing and the speed was incredible!"
     StockResponse1 = "Food tasted good."
@@ -169,8 +170,10 @@ try:
     # Screen 6 - Hard or Soft Shell?
     HardShell = driver.find_element_by_xpath('//*[@id="FNSR031000"]/td[2]/span')
     HardShell.click()
-    CrispyChickenTaco = driver.find_element_by_xpath('//*[@id="FNSR000127"]/td[2]/span')
-    CrispyChickenTaco.click()
+    
+    # No Longer Included In Surveys - Removing
+    #CrispyChickenTaco = driver.find_element_by_xpath('//*[@id="FNSR000127"]/td[2]/span')
+    #CrispyChickenTaco.click()
 
     NextButton()
 
@@ -185,14 +188,16 @@ try:
     Sweepstakes.click()
 
     # Final Submission
-    #NextButton()
+    os.system('cls' if os.name == 'nt' else 'clear')
+    NextButton()
+    print("Info: Survey Completed Successfully") 
     
 except:
     # Should Work
     print("Error: Chrome and WebDriver Version Desync")
     print("Solution: The Earliest Error Code Points to the Solution")
+    print("Info: The Survey Did Not Complete Successfully")
 
-# Let User See Completion Screen
-time.sleep(5)
-print("Survey Complete")
+# Let User See Screen
+time.sleep(20)
 driver.quit()
