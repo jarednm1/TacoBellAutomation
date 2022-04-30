@@ -1,6 +1,6 @@
 *Author: Jared Myers*
 
-*Updated: 1/8/21*
+*Updated: 4/29/22*
 
 # Purpose
 
@@ -36,7 +36,9 @@ NOTE: ```sudo``` is sometimes required infront of this command as well based on 
 ## Google Chrome + Chrome Driver
 ## Chrome:
 
-I chose to use Google Chrome as it commonly found on many people's machines. Simply install Google Chrome here: https://www.google.com/chrome/ if you do not already have it installed.
+I chose to use Google Chrome as it commonly found on many people's machines MacOS or Windows. 
+Simply install Google Chrome here: https://www.google.com/chrome/ if you do not already have it installed.
+Additionally, it must be updated to Version 101.0.4951.41
 
 ## Driver: 
 
@@ -81,5 +83,6 @@ I plan to fill this in as people use it and run into problems. Fortunately, this
 3.
 
 
-# Known Bugs
+# Known Issues/Future Plans
 1. Curently, it does not allow spaces in the name/more than one name without spaces. This is an easy fix I just havent fixed it as of writing this.
+2. Better Error Logging
