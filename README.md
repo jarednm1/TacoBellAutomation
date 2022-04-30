@@ -85,4 +85,4 @@ I plan to fill this in as people use it and run into problems. Fortunately, this
 
 # Known Issues/Future Plans
 1. Curently, it does not allow spaces in the name/more than one name without spaces. This is an easy fix I just havent fixed it as of writing this.
-2. Better Error Logging
+2. Better Error Logging.
