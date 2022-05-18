@@ -10,6 +10,10 @@ def NextButton():
     NextButton = driver.find_element(By.XPATH, '//*[@id="NextButton"]')
     NextButton.click()
 
+def CmdClear():
+    # Clears cmd window of random selenium garbage
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 driver = webdriver.Chrome()
 
 # Check For Chrome/Driver Mismatch: Must be on newest Chrome!
@@ -23,11 +27,12 @@ try:
 
     # Minimizes the window for CMD input
     driver.minimize_window()
+    CmdClear()
 
     # Survey Code Entry
     if(testing == True):
         SixteenDigitCode = "8041903919073402"
-        CashierName = "TEST"
+        CashierName = " "
     else:
         # Finds Entry Box and starts typing
         SixteenDigitCode = input("Please enter the 16 digit code from your survey: ")
@@ -35,15 +40,15 @@ try:
     
     # Input Validation
     # Accepts Letters and Spaces
+    # If no name given it autofills with the manager
+    if(CashierName == " " or CashierName == ""):
+        CashierName = "The Manager"
+
     isValidName = bool(re.match('[a-zA-Z\s]+$', CashierName))
     if(isValidName == False):
-       print("Error: Name Contains Numbers/Spaces/Symbols")
+       print("Error: Name Contains Numbers/Symbols")
        time.sleep(15)
        sys.exit()
-
-    # If no name given it autofills with the manager
-    if(CashierName == ""):
-        CashierName = "The Manager"
 
     # Checks if Survey code is all numbers
     if (int(SixteenDigitCode) < 1000000000000000 or SixteenDigitCode.isdigit() == False):
@@ -197,8 +202,7 @@ try:
     if(testing == True):
         print("Info: Skipping next button due to testing")
     else:
-        # Clears cmd window of random selenium garbage
-        os.system('cls' if os.name == 'nt' else 'clear')
+        CmdClear()
         NextButton()
         print("Info: Survey Completed Successfully") 
     
