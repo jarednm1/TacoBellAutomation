@@ -1,6 +1,6 @@
 *Author: Jared Myers*
 
-*Updated: 5/15/22*
+*Updated: 7/15/22*
 
 # Purpose
 
@@ -43,7 +43,7 @@ Additionally, it must be updated to Version 101.0.4951.67
 ## Driver: 
 
 #### Mac/Linux:
-1. To install the associated Chrome Driver, navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
+1. To install the associated Chrome Driver, navigate here: https://sites.google.com/chromium.org/driver/ and click on the correct Driver that matches your Chrome Version and platform. 
 2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 3. Open Terminal
 4. Run ```sudo nano /etc/paths```
@@ -56,7 +56,7 @@ Example: ```/Users/MY NAME/TacoBellAutomation```
 
 ### Windows:
 
-1. To install the associated Chrome Driver, navigate here: https://sites.google.com/a/chromium.org/chromedriver/downloads and click on the correct Driver that matches your Chrome Version and platform. 
+1. To install the associated Chrome Driver, navigate here: https://sites.google.com/chromium.org/driver/ and click on the correct Driver that matches your Chrome Version and platform. 
 2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 
 # Usage
