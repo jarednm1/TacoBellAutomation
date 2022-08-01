@@ -1,6 +1,6 @@
 *Author: Jared Myers*
 
-*Updated: 7/15/22*
+*Updated: 7/31/22*
 
 # Purpose
 
@@ -83,5 +83,5 @@ I plan to fill this in as people use it and run into problems. Fortunately, this
 3.
 
 # Known Issues/Future Plans
-1. N/A
+1. Actually do the chance for 500$ cause free $ lol
 2. N/A
