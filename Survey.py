@@ -28,7 +28,7 @@ driver = webdriver.Chrome()
 # Check For Chrome/Driver Mismatch: Must be on newest Chrome!
 try:
     # Easy Testing Toggle
-    testing = True
+    testing = False
 
     # Get Webpage and let it load
     driver.get('https://www.tellthebell.com/')
