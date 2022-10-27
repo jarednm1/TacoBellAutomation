@@ -19,6 +19,33 @@ def DoesItExist(xpath):
         return False
     return True
 
+def HighlySatisfiedResponses():
+    choice = random.randint(0,5)
+    default = "Nothing to complain about"
+    switch = {
+        1: "Food was amazing and the speed was incredible!",
+        2: "Food tasted good.",
+        3: "No problems!",
+        4: "Food looked and tasted great!",
+        5: "The speed of service was higher than expected",
+        6: "Food was as ordered"
+    }
+    return switch.get(choice, default)
+
+def EmployeePraise():
+    choice = random.randint(0,7)
+    default = "Nothing to complain about"
+    switch = {
+        1: " did an excellent job taking care of myself and other customers in the line. Exceptional work!",
+        2: " was super friendly and personal at the window!",
+        3: " is an amazing worker! Do whatever you can to keep them.",
+        4: " and crew provided excellent food.",
+        5: " took my order effectively and made no mistakes.",
+        6: " made sure to ask if I wanted anything else or sauces.",
+        7: " and crew were quick as expected from fast food. Good stuff!"
+    }
+    return switch.get(choice, default)
+
 def CmdClear():
     # Clears cmd window of random selenium garbage
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -151,22 +178,7 @@ try:
 
     # Screen 4 - You said You were highly satisfied
     # Pick a Canned Response
-    FinalResponse = ""
-    StockResponse0 = "Food was amazing and the speed was incredible!"
-    StockResponse1 = "Food tasted good."
-    StockResponse2 = "No problems!"
-    StockResponse3 = "Food looked and tasted great!"
-    
-    choice = random.randint(0,3)
-
-    if (choice == 0):
-        FinalResponse = StockResponse0
-    elif (choice == 1):
-        FinalResponse = StockResponse1
-    elif (choice == 2):
-        FinalResponse = StockResponse2
-    else:
-        FinalResponse = StockResponse3
+    FinalResponse = HighlySatisfiedResponses()
 
     if(DoesItExist('//*[@id="S081000"]')):
         TextBox1 = driver.find_element(By.XPATH, '//*[@id="S081000"]')
@@ -183,23 +195,13 @@ try:
     # Screen 5 - Name Drop Time
     # Team Member Name
     if(DoesItExist('//*[@id="S081001"]')):
+
+        # Fill in Name
         TeamMemberName = driver.find_element(By.XPATH, '//*[@id="S081001"]')
         TeamMemberName.send_keys(CashierName)
 
         # Team Member Extended Response
-        FinalResponse = ""
-        StockResponse0 = " did an excellent job taking care of myself and other customers in the line. Exceptional work!"
-        StockResponse1 = " was super friendly and personal at the window!"
-        StockResponse2 = " is an amazing worker! Do whatever you can to keep them."
-        choice = random.randint(0,2)
-
-        if (choice == 0):
-            FinalResponse = CashierName + StockResponse0
-        elif (choice == 1):
-            FinalResponse = CashierName + StockResponse1
-        else:
-            FinalResponse = CashierName + StockResponse2
-
+        FinalResponse = CashierName + EmployeePraise()
         TeamMemberDescription = driver.find_element(By.XPATH, '//*[@id="S081002"]')
         TeamMemberDescription.send_keys(FinalResponse)
         NextButton()
