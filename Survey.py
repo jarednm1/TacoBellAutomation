@@ -34,7 +34,7 @@ def HighlySatisfiedResponses():
 
 def EmployeePraise():
     choice = random.randint(0,7)
-    default = "Nothing to complain about"
+    default = " took my order."
     switch = {
         1: " did an excellent job taking care of myself and other customers in the line. Exceptional work!",
         2: " was super friendly and personal at the window!",
