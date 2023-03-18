@@ -1,6 +1,6 @@
 *Author: Jared Myers*
 
-*Updated: 7/31/22*
+*Updated: 3/18/23*
 
 # Purpose
 
@@ -38,7 +38,7 @@ NOTE: ```sudo``` is sometimes required infront of this command as well based on 
 
 I chose to use Google Chrome as it commonly found on many people's machines: MacOS or Windows. 
 Simply install Google Chrome here: https://www.google.com/chrome/ if you do not already have it installed.
-Additionally, it must be updated to Version 101.0.4951.67
+Additionally, it must be updated to Version 111.+
 
 ## Driver: 
 
