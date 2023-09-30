@@ -1,10 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
-import random
-import sys
 import os
 import re
+import sys
+import time
+import random
 
 def NextButton():
     NextButton = driver.find_element(By.XPATH, '//*[@id="NextButton"]')
@@ -55,7 +55,7 @@ driver = webdriver.Chrome()
 # Check For Chrome/Driver Mismatch: Must be on newest Chrome!
 try:
     # Easy Testing Toggle
-    testing = False
+    testing = True
 
     # Get Webpage and let it load
     driver.get('https://www.tellthebell.com/')
