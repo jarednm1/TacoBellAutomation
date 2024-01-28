@@ -81,7 +81,7 @@ try:
     if(CashierName == " " or CashierName == ""):
         CashierName = "The Manager"
 
-    isValidName = bool(re.match('[a-zA-Z\s]+$', CashierName))
+    isValidName = bool(re.match(r'^[a-zA-Z]+$', CashierName))
     if(isValidName == False):
        print("Error: Name Contains Numbers/Symbols")
        time.sleep(15)
