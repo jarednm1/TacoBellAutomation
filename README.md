@@ -1,12 +1,12 @@
 *Author: Jared Myers*
 
-*Updated: 09/30/23*
+*Updated: 03/20/24*
 
 # Purpose
 
 The purpose of this short and simple Python script is to quickly complete the survey found at the top of each and every Taco Bell receipt. I found that it is somewhat long and annoying to take mannually and I feel that its length is a major deterrant to those wanting to take the survey.
 
-Additionally, taking the survey and naming the employee listed on the reciept earns the worker at my local location monetary compensation per survey mention and I value their hard work.
+Additionally, taking the survey and naming the employee listed on the reciept earns the workers at my local location monetary compensation per survey mention and I value their hard work.
 
 # Requirements
 
@@ -43,6 +43,7 @@ Additionally, it must be updated to Version 111.+
 ## Driver: 
 
 #### Mac/Linux:
+
 1. To install the associated Chrome Driver, navigate here: https://googlechromelabs.github.io/chrome-for-testing/#stable and choose the correct Driver that matches your Chrome Version and platform. 
 2. Once downloaded, cut and paste the chromedriver into the same directory as the python script.
 3. Open Terminal

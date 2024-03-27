@@ -1,10 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
-import random
-import sys
 import os
 import re
+import sys
+import time
+import random
 
 def NextButton():
     NextButton = driver.find_element(By.XPATH, '//*[@id="NextButton"]')
@@ -101,20 +101,20 @@ try:
     SurveyCode.send_keys(SixteenDigitCode)
     NextButton()
 
-    # Screen 1 - Overall Satisfaction
+    # Screen - Overall Satisfaction
     if(DoesItExist('//*[@id="FNSR001000"]/td[1]/span')):
         HighSatisfy = driver.find_element(By.XPATH, '//*[@id="FNSR001000"]/td[1]/span')
         HighSatisfy.click()
         NextButton()
 
-    # Screen 1.2 - Order Type: Carry out
+    # Screen - Order Type: Carry out
     if(DoesItExist('//*[@id="FNSR004000"]/div/div/div[1]/span/span')):
         CarryOut = driver.find_element(By.XPATH, '//*[@id="FNSR004000"]/div/div/div[1]/span/span')
         CarryOut.click()
         NextButton()
 
     if(DoesItExist('//*[@id="FNSR012000"]/td[1]/span') or DoesItExist('//*[@id="FNSR000121"]/td[1]/span')):
-        # Screen 2 - Rate Satisfication | Big Chunk | Completely Random Order
+        # Screen - Rate Satisfication | Big Chunk | Completely Random Order
         try:
             SpeedService = driver.find_element(By.XPATH, '//*[@id="FNSR012000"]/td[1]/span')
             SpeedService.click()
@@ -170,13 +170,19 @@ try:
             print("Info: Option Not Present; Skipped")
         NextButton()
 
-    # Screen 3 - Problem In Visit (No)
+    # Screen - Freshness of Food
+    if(DoesItExist('//*[@id="FNSR000141"]/td[1]/span')):
+        Freshness = driver.find_element(By.XPATH, '//*[@id="FNSR000141"]/td[1]/span')
+        Freshness.click()
+        NextButton()
+
+    # Screen - Problem In Visit (No)
     if(DoesItExist('//*[@id="FNSR024000"]/td[2]/span')):
         Problem = driver.find_element(By.XPATH, '//*[@id="FNSR024000"]/td[2]/span')
         Problem.click()
         NextButton()
 
-    # Screen 4 - You said You were highly satisfied
+    # Screen - You Said You were highly satisfied
     # Pick a Canned Response
     FinalResponse = HighlySatisfiedResponses()
 
@@ -186,13 +192,13 @@ try:
         TextBox1.send_keys(FinalResponse)
         NextButton()
 
-    # Screen 4 - Reconize Team Member? Yes
+    # Screen - Reconize Team Member? Yes
     if(DoesItExist('//*[@id="FNSR030000"]/td[1]/span')):
         ReconizeMember = driver.find_element(By.XPATH, '//*[@id="FNSR030000"]/td[1]/span')
         ReconizeMember.click()
         NextButton()
 
-    # Screen 5 - Name Drop Time
+    # Screen - Name Drop Time
     # Team Member Name
     if(DoesItExist('//*[@id="S081001"]')):
 
@@ -206,7 +212,7 @@ try:
         TeamMemberDescription.send_keys(FinalResponse)
         NextButton()
 
-    # Screen 6 - Hard or Soft Shell?
+    # Screen - Hard or Soft Shell?
     if(DoesItExist('//*[@id="FNSR031000"]/td[2]/span')):
         HardShell = driver.find_element(By.XPATH, '//*[@id="FNSR031000"]/td[2]/span')
         HardShell.click()
@@ -219,14 +225,20 @@ try:
             print("Info: Option Not Present; Skipped")
         NextButton()
 
-    # Screen 7 - Health Safety Extended Response
+    # Screen - Cantina Checkbox
+    if(DoesItExist('//*[@id="FNSR000164"]/span/span')):
+        ReconizeMember = driver.find_element(By.XPATH, '//*[@id="FNSR000164"]/span/span')
+        ReconizeMember.click()
+        NextButton()
+
+    # Screen - Health Safety Extended Response
     if(DoesItExist('//*[@id="S000124"]')):
         HealthySafetyER = driver.find_element(By.XPATH, '//*[@id="S000124"]')
         FillResponse2 = CashierName + " made me feel safe. All interactions followed decent guidelines regarding saftey!"
         HealthySafetyER.send_keys(FillResponse2)
         NextButton()
 
-    # Screen 8 - Enter Sweepstakes? (No, for now..)
+    # Screen - Enter Sweepstakes? (No, for now..)
     Sweepstakes = driver.find_element(By.XPATH, '//*[@id="FNSR046000"]/td[2]/span')
     Sweepstakes.click()
 
